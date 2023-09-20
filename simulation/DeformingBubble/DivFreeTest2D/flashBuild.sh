@@ -1,11 +1,14 @@
-# cache the value of current directory
+# cache the value of current working directory
 NodeDir=$(realpath .)
 
-# setup Flash-X
-cd $FLASHX_HOME && ./setup $FlashOptions -objdir=object_am
+ExternalSimName="incompFlow/FlashExternal"
+
+# Link private simulation directory
+rm -r $FLASHX_HOME/source/Simulation/SimulationMain/$ExternalSimName
+ln -s $NodeDir $FLASHX_HOME/source/Simulation/SimulationMain/$ExternalSimName 
+
+# run Flash-X setup
+cd $FLASHX_HOME && git checkout amrex-facevars-updates && ./setup $ExternalSimName $FlashOptions
 
 # compile the simulation and copy files
-cd $FLASHX_HOME/object_am && make -j && cp flashx $NodeDir/
-
-# chdir into node directory and do clean up
-# cd $NodeDir && rm -rf $FLASHX_HOME/object
+cd $FLASHX_HOME/object && make -j && cp flashx $NodeDir/
