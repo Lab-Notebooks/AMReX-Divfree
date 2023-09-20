@@ -1,11 +1,4 @@
-## Execution Environment for Developing AMReX in Bittree Mode
-
-For instructions on how to use the notebook pelase see the README for these repositories:
-- https://github.com/Lab-Notebooks/Outflow-Forcing-BubbleML
-- https://github.com/akashdhruv/Jobrunner
-
-Data repository is located here:
-- https://anl.box.com/s/dzc97mnedg0pdj1ddipu7yl59z4ag30f
+## Execution Environment for Testing Divergence Interpolation in Flash-X + AMReX
 
 Overview of steps to get this lab notebook running.
 
@@ -27,7 +20,6 @@ Overview of steps to get this lab notebook running.
 
 6. Setup software stack:
   ```
-  jobrunner setup software/bittree
   jobrunner setup software/amrex
   jobrunner setup software/flashx
   jobrunner setup software/flashkit
@@ -40,18 +32,18 @@ Overview of steps to get this lab notebook running.
    
 8. Setup a test simulation:
   ```
-  jobrunner setup simulation/DeformingBubble/Bittree2D/amrexBittree
+  jobrunner setup simulation/DeformingBubble/DivFreeTest2D
   ```
 
 9. Run the simulation
   ```
-  jobrunner submit simulation/DeformingBubble/Bittree2D/amrexBittree
+  jobrunner submit simulation/DeformingBubble/DivFreeTest2D
   ```
-  Console output can be viewed in file `simulation/DeformingBubble/Bittree2D/amrexBittree/job.output`
+  Console output can be viewed in file `simulation/DeformingBubble/DivFreeTest2D/job.output`
 
 10. Postprocessing:
    ```
-   cd simulation/DeformingBubble/Bittree2D/amrexBittree
+   cd simulation/DeformingBubble/DivFreeTest2D
    flashkit create xdmf --auto
    ```    
    This will create `INS_Deforming_Bubble.xmf` that can be opened in paraview.
