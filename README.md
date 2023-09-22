@@ -1,4 +1,4 @@
-## Execution Environment for Testing Divergence Interpolation in Flash-X + AMReX
+## Execution Environment for Testing Divergence Free Interpolation in Flash-X + AMReX
 
 Overview of steps to get this lab notebook running.
 
