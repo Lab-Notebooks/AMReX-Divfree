@@ -2,10 +2,7 @@
 
 # Setup AMReX
 if [ ! -d "AMReX" ]; then
-	git clone git@github.com:Box-Tools/amrex.git --branch main AMReX && cd AMReX
-
-	# checkout desired sha-1
-	git checkout divfree-testing
+	git clone git@github.com:Box-Tools/amrex.git --branch bt-merge AMReX && cd AMReX
 else
 	cd AMReX
 fi

@@ -1,0 +1,1 @@
+- \[ \] Calculate velocities by averaging values from fine/coarse resolution and not directly from analytical solution at a given point (advised by Klaus and Weiqun).
