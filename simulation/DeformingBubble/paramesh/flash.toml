@@ -9,10 +9,10 @@
   ymax = 1.0
   
   #       Boundary conditions
-  xl_boundary_type = "periodic"
-  xr_boundary_type = "periodic"
-  yl_boundary_type = "periodic"
-  yr_boundary_type = "periodic"
+  xl_boundary_type = "noslip_ins"
+  xr_boundary_type = "noslip_ins"
+  yl_boundary_type = "noslip_ins"
+  yr_boundary_type = "noslip_ins"
   
   #       Simulation (grid, time, I/O) parameters
   run_comment = "Deforming Bubble problem"
@@ -20,7 +20,7 @@
   basenm = "INS_Deforming_Bubble_"
   restart = ".false."
   nend = 50000
-  tmax = 2.0
+  tmax = 0.1
   ins_cflFlg = 0
   ins_cfl = 1.0
   ins_sigma = 1.0
@@ -41,7 +41,7 @@
   plotFileIntervalStep = 1000
   
   CSVSummaryAllProcs = ".TRUE." 
-  sim_reInitFlow = ".true."
+  sim_reInitFlow = ".false."
   
   # AMR parameters
   nblockx = 4
@@ -49,8 +49,8 @@
   nrefs = 2
   
   lrefine_min = 1
-  lrefine_max = 5
-  
+  lrefine_max = 5 
+ 
   refine_var_count = 1
   refine_var_1 = "dfun"
   refine_cutoff_1 = 0.0

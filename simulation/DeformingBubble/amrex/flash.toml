@@ -1,0 +1,58 @@
+#
+[Parfile]
+  wr_integrals_freq = -1
+  
+  #       Size of computational volume
+  xmin = 0.0
+  xmax = 1.0
+  ymin = 0.0
+  ymax = 1.0
+  
+  #       Boundary conditions
+  xl_boundary_type = "noslip_ins"
+  xr_boundary_type = "noslip_ins"
+  yl_boundary_type = "noslip_ins"
+  yr_boundary_type = "noslip_ins"
+  
+  #       Simulation (grid, time, I/O) parameters
+  run_comment = "Deforming Bubble problem"
+  log_file = "INS_Deforming_Bubble.log"
+  basenm = "INS_Deforming_Bubble_"
+  restart = ".false."
+  nend = 50000
+  tmax = 0.1
+  ins_cflFlg = 0
+  ins_cfl = 1.0
+  ins_sigma = 1.0
+  ins_dtSpec = 1.0e-5
+  dtinit = 1.0e-5
+  tstep_change_factor = 1.0
+  ins_pressureCorrect = ".true."
+  
+  plot_var_1 = "dust"
+  plot_var_2 = "velx"
+  plot_var_3 = "vely"
+  plot_var_4 = "dfun"
+  
+  checkpointFileIntervalTime = 0.0
+  checkpointFileIntervalStep = 1000
+  
+  plotFileIntervalTime = 0.0
+  plotFileIntervalStep = 1000
+  
+  CSVSummaryAllProcs = ".TRUE."
+  sim_reInitFlow = ".false."
+  
+  # AMR parameters
+  nblockx = 4
+  nblocky = 4
+  nrefs = 2
+  
+  lrefine_min = 1
+  lrefine_max = 5
+  
+  ignoreForcedPlot = ".TRUE."
+  refine_var_count = 1
+  refine_var_1 = "dfun"
+  refine_cutoff_1 = 0.0
+  derefine_cutoff_1 = -0.01
