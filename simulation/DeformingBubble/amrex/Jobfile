@@ -8,13 +8,11 @@ job:
   clean:
     - flashx
     - "*.out"
-    - "INS*"
+    - "*_hdf5_*"
     - "unitTest*"
     - flash.par
   setup:
     - flashOptions.sh
     - flashBuild.sh
-  input:
-    - flash.toml
   submit:
     - flashRun.sh

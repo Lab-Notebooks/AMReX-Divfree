@@ -1,0 +1,6 @@
+# Configuration file for `jobrunner`
+
+job:
+  input:
+    - initial.toml
+    #- restart.toml
