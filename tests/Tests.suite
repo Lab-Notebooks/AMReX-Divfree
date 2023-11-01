@@ -17,6 +17,7 @@
 
 incompFlow/DeformingBubble -t "Composite/DeformingBubble/2d/AMReX" -np 4 -cbase 2023-10-31_2 -rbase 2023-10-31_3
 incompFlow/DeformingBubble -t "Composite/DeformingBubble/2d/Paramesh" -np 4 -cbase 2023-10-31_2 -rbase 2023-10-31_3
+incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReXGCFill/2d" -np 3 -cbase 2023-10-21
 
 unitTest/Grid/Amrex/TestInit -t "UnitTest/Grid/AMR/AMReX/2d/Init" -np 1
 unitTest/Grid/Amrex/TestRefine -t "UnitTest/Grid/AMR/AMReX/2d/Refine" -np 1
