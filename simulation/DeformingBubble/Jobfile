@@ -2,5 +2,7 @@
 
 job:
   input:
-    - initial.toml
+    - base.toml
+    - norestart.toml
+    #- initial.toml
     #- restart.toml

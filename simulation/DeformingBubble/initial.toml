@@ -1,48 +1,13 @@
-#
-[Parfile]
-  wr_integrals_freq = -1
-  
-  # Size of computational volume
-  xmin = 0.0
-  xmax = 1.0
-  ymin = 0.0
-  ymax = 1.0
-  
-  # Boundary conditions
-  xl_boundary_type = "noslip_ins"
-  xr_boundary_type = "noslip_ins"
-  yl_boundary_type = "noslip_ins"
-  yr_boundary_type = "noslip_ins"
-  
-  # Simulation (grid, time, I/O) parameters
-  restart = ".false."
-  nend = 50000
-  tmax = 0.1
-  ins_cflFlg = 0
-  ins_cfl = 1.0
-  ins_sigma = 1.0
-  ins_dtSpec = 1.0e-5
-  dtinit = 1.0e-5
-  tstep_change_factor = 1.0
- 
-  plot_var_1 = "dust"
-  plot_var_2 = "velx"
-  plot_var_3 = "vely"
-  plot_var_4 = "dfun"
-  
+[IO]
   checkpointFileNumber = 0
   plotFileNumber = 0
 
-  # AMR parameters
-  nblockx = 4
-  nblocky = 4
-  nrefs = 2
-  
+[Driver]
+  restart = false
+  nend = 50000
+  tmax = 0.1
+
+[Grid] 
   lrefine_min = 1
   lrefine_max = 1
-  
-  ignoreForcedPlot = ".TRUE."
-  refine_var_count = 1
-  refine_var_1 = "dfun"
-  refine_cutoff_1 = 0.0
-  derefine_cutoff_1 = -0.01
+  nrefs = 10000

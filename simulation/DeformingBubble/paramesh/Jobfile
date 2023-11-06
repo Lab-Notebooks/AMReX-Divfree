@@ -5,11 +5,15 @@ job:
   archive:
     - "INS*"
     - "*.out"
+    - "*.log"
   clean:
+    - amr_runtime_parameters.dump
+    - setup_params
     - flashx
     - "*.out"
     - "*_hdf5_*"
     - "unitTest*"
+    - "*.log"
     - flash.par
   setup:
     - flashOptions.sh

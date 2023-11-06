@@ -5,12 +5,15 @@ job:
   archive:
     - "INS*"
     - "*.out"
+    - "*.log"
   clean:
+    - setup_params
     - flashx
     - "*.out"
     - "*_hdf5_*"
     - "unitTest*"
     - flash.par
+    - "*.log"
   setup:
     - flashOptions.sh
     - flashBuild.sh

@@ -1,14 +1,14 @@
 [Driver]
-  restart = true
+  restart = false
   nend = 50000
   tmax = 0.15
 
 [IO] 
-  checkpointFileNumber = 1
-  plotFileNumber = 1
+  checkpointFileNumber = 0
+  plotFileNumber = 0
 
 [Grid]
-  #amrexFaceInterpolator = "FACE_DIV_FREE"
+  amrexFaceInterpolator = "face_div_free"
   nrefs = 2
   lrefine_min = 1
   lrefine_max = 5
