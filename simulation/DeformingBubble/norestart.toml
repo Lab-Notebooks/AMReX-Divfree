@@ -8,7 +8,6 @@
   plotFileNumber = 0
 
 [Grid]
-  amrexFaceInterpolator = "face_div_free"
   nrefs = 2
   lrefine_min = 1
   lrefine_max = 5

@@ -2,6 +2,8 @@
 
 job:
   target: flashx
+  input:
+    - interpolator.toml
   archive:
     - "INS*"
     - "*.out"

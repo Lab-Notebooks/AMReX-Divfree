@@ -1,0 +1,2 @@
+[Grid]
+  amrexFaceInterpolator = "face_div_free"
